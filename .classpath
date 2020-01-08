@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/selenium/client-combined-3.141.59.jar"/>
+	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/selenium/client-combined-3.141.59-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/selenium/libs/byte-buddy-1.8.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/selenium/libs/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/selenium/libs/guava-25.0-jre.jar"/>
+	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/selenium/libs/okhttp-3.11.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/selenium/libs/okio-1.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/CucumberJars/cucumber-core-5.0.0-RC4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/CucumberJars/cucumber-java-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/CucumberJars/cucumber-junit-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/CucumberJars/cucumber-jvm-deps-1.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/CucumberJars/gherkin-2.9.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
