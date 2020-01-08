@@ -9,10 +9,16 @@
 	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/selenium/libs/guava-25.0-jre.jar"/>
 	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/selenium/libs/okhttp-3.11.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/selenium/libs/okio-1.14.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/CucumberJars/cucumber-core-5.0.0-RC4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/CucumberJars/cucumber-java-1.2.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/CucumberJars/cucumber-junit-1.2.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/CucumberJars/cucumber-jvm-deps-1.0.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/CucumberJars/gherkin-2.9.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/CucumberJars/cucumber-junit-1.2.5.jar" sourcepath="C:/Users/emerson.prado/eclipse-toolsqa/workspace-cucumber/libs/CucumberJars/cucumber-junit-1.2.5.jar">
+		<attributes>
+			<attribute name="source_encoding" value="UTF-8"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/emerson.prado/Downloads/gherkin-2.12.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/emerson.prado/Downloads/cucumber-jvm-deps-1.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/emerson.prado/Downloads/cucumber-html-0.2.3.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="C:/Users/emerson.prado/Downloads/cucumber-core-1.2.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
