@@ -1,4 +1,4 @@
-package cucumberTest;
+package br.com.rsinet.hub_bdd.cucumberTest;
 
 import java.util.concurrent.TimeUnit;
 

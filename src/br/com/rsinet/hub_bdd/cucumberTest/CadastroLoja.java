@@ -1,4 +1,4 @@
-package cucumberTest;
+package br.com.rsinet.hub_bdd.cucumberTest;
 
 import java.util.concurrent.TimeUnit;
 
@@ -39,8 +39,8 @@ public class CadastroLoja {
 		country.selectByVisibleText("Brazil");
 
 		driver.findElement(By.name("cityRegisterPage")).sendKeys("Osasco");
-		driver.findElement(By.name("addressRegisterPage")).sendKeys("Rua Sebastião Picão");
-		driver.findElement(By.name("state_/_province_/_regionRegisterPage")).sendKeys("São Paulo");
+		driver.findElement(By.name("addressRegisterPage")).sendKeys("Rua Sebastiï¿½o Picï¿½o");
+		driver.findElement(By.name("state_/_province_/_regionRegisterPage")).sendKeys("Sï¿½o Paulo");
 		driver.findElement(By.name("postal_codeRegisterPage")).sendKeys("06293110");
 		driver.findElement(By.name("i_agree")).click();
 

@@ -1,4 +1,4 @@
-package stepDefinition;
+package br.com.rsinet.hub_bdd.stepDefinition;
  
 public class Credentials {
  private String username;
