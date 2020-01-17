@@ -1,5 +1,7 @@
 package stepDefinition;
 
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -7,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import cucumber.api.PendingException;
+import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -30,12 +32,15 @@ public class Test_Steps {
 		botaoLogin.click();
 	}
 
-	@When("^User enters UserName and Password$")
-	public void user_enters_UserName_and_Password() throws Throwable {
-		driver.findElement(By.name("username")).sendKeys("emerson.prado");
-		driver.findElement(By.name("password")).sendKeys("Teste@1234");
-		Thread.sleep(2000);
-		driver.findElement(By.id("sign_in_btnundefined")).click();
+	@When("^User enters Credentials to LogIn$")
+	public void user_enters_testuser_and_Test(List<Credentials>  usercredentials) throws Throwable {
+		// Write the code to handle Data Table
+		for (Credentials credentials : usercredentials) {
+			driver.findElement(By.name("username")).sendKeys(credentials.getUsername());
+			driver.findElement(By.name("password")).sendKeys(credentials.getPassword());
+			Thread.sleep(2000);
+			driver.findElement(By.id("sign_in_btnundefined")).click();
+		}
 	}
 
 	@Then("^Message displayed Login Successfully$")
