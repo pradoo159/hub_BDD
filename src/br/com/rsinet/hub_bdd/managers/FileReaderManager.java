@@ -9,13 +9,13 @@ public class FileReaderManager {
 	
 	private FileReaderManager() {
 	}
-
-	public static FileReaderManager getInstance() {
-		return fileReaderManager;
-	}
 	
-	public ConfigFileReader getConfigFileReader() {
-		return (configFileReader == null) ? new ConfigFileReader() : configFileReader;
-	}
-	
+	 public static FileReaderManager getInstance( ) {
+	      return fileReaderManager;
+	 }
+	 
+	 public ConfigFileReader getConfigReader() {
+		 return (configFileReader == null) ? configFileReader = new ConfigFileReader() : configFileReader;
+	 }
+	 
 }
