@@ -1,20 +1,20 @@
 package br.com.rsinet.hub_bdd.pageObject;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.com.rsinet.hub_bdd.util.Print_Func;
+import br.com.rsinet.hub_bdd.util.Wait;
 
 public class Register_Page {
+	WebDriver driver;
 	
 	public Register_Page(WebDriver driver) {
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -118,8 +118,8 @@ public class Register_Page {
 		btn_Register.click();
 	}
 	
-	public void completeValidRegister(WebDriver driver) {
-		enter_UserName("pradoov009");
+	public void completeValidRegister() {
+		enter_UserName("pradoov116");
 		enter_Email("emersonpradoo@hotmail.com");
 		enter_Password("Teste@1234");
 		enter_ConfirmPassword("Teste@1234");
@@ -133,12 +133,11 @@ public class Register_Page {
 		enter_PostalCode("06293110");
 		accept_Terms();
 		click_Register();
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("tabletsTxt"))));
+		Wait.untilJqueryIsDone(driver);
 		Print_Func.captureScreenShot(driver);
 	}
 	
-	public void completeFailRegister(WebDriver driver) {
+	public void completeFailRegister() {
 		enter_UserName("pradoof001");
 		enter_Email("emersonpradoo@hotmail.com2");
 		enter_Password("Teste@1234");

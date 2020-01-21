@@ -26,7 +26,7 @@ public class DriverFactory {
 	public static void abrirSite(WebDriver driver) {
 		if(driver != null)
 			configFileReader = new ConfigFileReader();
-			driver.get(FileReaderManager.getInstance().getConfigFileReader().getApplicationUrl());
+			driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
 		
 	}
 
