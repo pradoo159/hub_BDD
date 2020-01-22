@@ -32,7 +32,7 @@ public class ProductsPageSteps {
     @When("^User click on chosen laptop$")
     public void user_click_on_chosen_laptop() throws Throwable {
     	products.close_Search();
-    	
+    	products.click_Laptop();
     }
 
     @Then("^Laptop Chosed page will be displayed$")

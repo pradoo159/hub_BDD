@@ -38,6 +38,9 @@ public class Products_Page {
 		wait.until(ExpectedConditions.elementToBeClickable(closebtn_Search));
 		JavascriptExecutor ex = (JavascriptExecutor) driver;
 		ex.executeScript("arguments[0].click();", closebtn_Search);
+	}
+	
+	public void click_Laptop() {
 		lnk_Laptop.click();
 	}
 	

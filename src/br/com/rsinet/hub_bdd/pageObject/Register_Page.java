@@ -119,7 +119,7 @@ public class Register_Page {
 	}
 	
 	public void completeValidRegister() {
-		enter_UserName("pradoov116");
+		enter_UserName("pradoov118");
 		enter_Email("emersonpradoo@hotmail.com");
 		enter_Password("Teste@1234");
 		enter_ConfirmPassword("Teste@1234");
