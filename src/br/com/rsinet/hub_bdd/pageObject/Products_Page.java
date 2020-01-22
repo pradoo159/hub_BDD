@@ -51,5 +51,10 @@ public class Products_Page {
 	public String getErrorText() {
 		return txt_NoResult.getText();
 	}
+
+	public void click_Tablet() {
+		lnk_Tablet.click();
+	}
+	
 	
 }

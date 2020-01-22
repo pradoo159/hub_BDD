@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.com.rsinet.hub_bdd.managers.FileReaderManager;
-import br.com.rsinet.hub_bdd.util.Wait;
 
 public class Home_Page {
 	WebDriver driver;
@@ -62,5 +61,18 @@ public class Home_Page {
 	public void navigateTo_HomePage() {
 		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
 	}
+	
+	public void click_CategoryTablet() {
+		btn_Tablet.click();
+	}
+	
+	public void click_ViewDetails() {
+		lnk_NotebookInvalid.click();
+	}
+	
+	public String title_NotebookInvalid() {
+		return txt_NotebookInvalid.getText();
+	}
+	
 
 }

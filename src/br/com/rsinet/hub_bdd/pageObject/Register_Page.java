@@ -1,5 +1,6 @@
 package br.com.rsinet.hub_bdd.pageObject;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -119,7 +120,7 @@ public class Register_Page {
 	}
 	
 	public void completeValidRegister() {
-		enter_UserName("pradoov118");
+		enter_UserName("pradoov126");
 		enter_Email("emersonpradoo@hotmail.com");
 		enter_Password("Teste@1234");
 		enter_ConfirmPassword("Teste@1234");
@@ -134,12 +135,12 @@ public class Register_Page {
 		accept_Terms();
 		click_Register();
 		Wait.untilJqueryIsDone(driver);
-		Print_Func.captureScreenShot(driver);
 	}
 	
 	public void completeFailRegister() {
-		enter_UserName("pradoof001");
-		enter_Email("emersonpradoo@hotmail.com2");
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		enter_UserName("pradoov118");
+		enter_Email("emersonpradoo@hotmail.com");
 		enter_Password("Teste@1234");
 		enter_ConfirmPassword("Teste@1234");
 		Print_Func.captureScreenShot(driver);
@@ -153,6 +154,8 @@ public class Register_Page {
 		enter_PostalCode("06293110");
 		accept_Terms();
 		click_Register();
+		executor.executeScript("window.scrollBy(0,100)");
+		Wait.untilJqueryIsDone(driver);
 	}
 	
 }
