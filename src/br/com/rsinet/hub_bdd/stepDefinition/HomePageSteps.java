@@ -16,69 +16,64 @@ import cucumber.api.java.en.When;
 public class HomePageSteps {
 
 	Home_Page home;
-    WebDriver driver;
-    TestContext testContext;
-    LogIn_Page login;
+	WebDriver driver;
+	TestContext testContext;
+	LogIn_Page login;
 
- 
+	public HomePageSteps(TestContext context) throws Exception {
+		testContext = context;
+		home = testContext.getPageObjectManager().getHomePage();
+		login = testContext.getPageObjectManager().getLoginPage();
+		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Planilha1");
+	}
 
-    public HomePageSteps(TestContext context) throws Exception {
-        testContext = context;
-        home = testContext.getPageObjectManager().getHomePage();
-        login = testContext.getPageObjectManager().getLoginPage();
-        ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Planilha1");
-    }
+	@Given("^Usuario esteja na página inicial$")
+	public void usuario_esteja_na_página_inicial() throws Throwable {
+		home.navigateTo_HomePage();
+		Reporter.addStepLog("Entrando na página inicial");
+	}
 
+	// Register Valid/Invalid
+	@When("^Usuario navegar até a página de cadastro$")
+	public void usuario_navegar_até_a_página_de_cadastro() throws Throwable {
+		home.click_MyAccount();
+		login.click_CreateAccount();
+		Reporter.addStepLog("Entrando na página de cadastro");
+	}
 
-    @Given("^User is on Home Page$")
-    public void user_is_on_Home_Page() {
-        home.navigateTo_HomePage();
-        Reporter.addStepLog("Entrando na página inicial");
-    }
+	// Valid/Invalid Search By Text
+	@When("^Clicar no botão pesquisar$")
+	public void clicar_no_botão_pesquisar() throws Throwable {
+		home.menu_Search();
+		Reporter.addStepLog("Clicando no botão pesquisar");
+	}
 
- 
-    //Register Valid/Invalid
-    @When("^User Navigate to Register Page$")
-    public void user_Navigate_to_Register_Page() {
-    	home.click_MyAccount();
-    	login.click_CreateAccount();
-    	Reporter.addStepLog("Entrando na página de cadastro");
-    }
-    
-    // Valid/Invalid Search By Text
-    @When("^User click on search button$")
-    public void user_click_on_search_button() throws Throwable {
-    	home.menu_Search();
-    	Reporter.addStepLog("Clicando no botão pesquisar");
-    }
-    
-    // Valid Search By Text
-    @When("^User enters data to search$")
-    public void user_enters_data_to_search() throws Throwable {
-    	home.auto_Complete(Data.nomeLaptop());
-    	Reporter.addStepLog("Procurando por um produto válido");
-    }
-    
-    // Invalid Search By Text
-    @When("^User enters invalid data to search$")
-    public void user_enters_invalid_data_to_search() throws Throwable {
-        home.auto_Complete(Data.pesquisaInvalida1());
-        Reporter.addStepLog("Procurando por um produto inválido");
-    }
-    
-    // Valid Search By Image
-    @When("^User click on the desired category$")
-    public void user_click_on_the_desired_category() throws Throwable {
-    	home.click_CategoryTablet();
-    	Reporter.addStepLog("Clicando em uma categoria válida");
-    }
+	// Valid Search By Text
+	@When("^Escrever o nome de um laptop$")
+	public void escrever_o_nome_de_um_laptop() throws Throwable {
+		home.auto_Complete(Data.nomeLaptop());
+		Reporter.addStepLog("Procurando por um produto válido");
+	}
 
-    //Invalid Search By Image
-    @When("^User click on view details$")
-    public void user_click_on_view_details() throws Throwable {
-    	home.click_ViewDetails();
-    	Reporter.addStepLog("Clicando no produto com erro");
-    }
+	// Invalid Search By Text
+	@When("^Escrever o nome de um produto inválido ou inexistente$")
+	public void escrever_o_nome_de_um_produto_inválido_ou_inexistente() throws Throwable {
+		home.auto_Complete(Data.pesquisaInvalida1());
+		Reporter.addStepLog("Procurando por um produto inválido");
+	}
+
+	// Valid Search By Image
+	@When("^Clicar na categoria desejada$")
+	public void clicar_na_categoria_desejada() throws Throwable {
+		home.click_CategoryTablet();
+		Reporter.addStepLog("Clicando em uma categoria válida");
+	}
+
+	// Invalid Search By Image
+	@When("^Usuario clicar para ver detalhes do laptop$")
+	public void usuario_clicar_para_ver_detalhes_do_laptop() throws Throwable {
+		home.click_ViewDetails();
+		Reporter.addStepLog("Clicando no produto com erro");
+	}
 
 }
-

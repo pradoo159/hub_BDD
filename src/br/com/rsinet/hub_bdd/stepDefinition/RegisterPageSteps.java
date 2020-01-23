@@ -25,28 +25,28 @@ public class RegisterPageSteps {
 	
 	// Valid Register
 
-	@When("^User enters data to register$")
-	public void user_enters_data_to_register() throws Throwable {
+	@When("^Preencher os campos com dados válidos$")
+	public void preencher_os_campos_com_dados_válidos() throws Throwable {
 		Reporter.addStepLog("Fazendo o cadastro com dados válidos");
 		registerPage.completeValidRegister();
 	}
 
-	@Then("^Message displayed Register Successfully and close Browser$")
-	public void message_displayed_Register_Successfully() throws Throwable {
+	@Then("^Será redirecionado para a página inicial com a conta logada$")
+	public void será_redirecionado_para_a_página_inicial_com_a_conta_logada() throws Throwable {
 		Reporter.addStepLog("Mensagem de sucesso");
 		System.out.println("Registered!");
 	}
 
 	// Invalid Register
 
-	@When("^User enters invalid data to register$")
-	public void user_enters_invalid_data_to_register() throws Throwable {
+	@When("^Preencher os campos com dados inválidos$")
+	public void preencher_os_campos_com_dados_inválidos() throws Throwable {
 		Reporter.addStepLog("Fazendo cadastro de usuário já cadastrado");
 		registerPage.completeFailRegister();
 	}
 
-	@Then("^Message displayed Register failed and close Browser$")
-	public void message_displayed_Register_failed_and_close_Browser() throws Throwable {
+	@Then("^O usuário receberá um erro e continuará na mesma página$")
+	public void o_usuário_receberá_um_erro_e_continuará_na_mesma_página() throws Throwable {
 		Reporter.addStepLog("Mensagem de falha");
 		System.out.println("Register Fail, invalid data!");
 	}

@@ -33,15 +33,15 @@ public class ProductsPageSteps {
 	}
 
 	// Valid Search By Text
-	@When("^User click on chosen laptop$")
-	public void user_click_on_chosen_laptop() throws Throwable {
+	@When("^Clicar no laptop escolhido$")
+	public void clicar_no_laptop_escolhido() throws Throwable {
 		Reporter.addStepLog("Clicando no produto escolhido");
 		products.close_Search();
 		products.click_Laptop();
 	}
 
-	@Then("^Laptop Chosed page will be displayed$")
-	public void laptop_Chosed_page_will_be_displayed() throws Throwable {
+	@Then("^A página do laptop escolhido será exibida$")
+	public void a_página_do_laptop_escolhido_será_exibida() throws Throwable {
 		Wait.untilJqueryIsDone(driver);
 		Reporter.addStepLog("Mostrando a página do produto escolhido");
 		assertEquals(products.getTitleText(), "HP PAVILION 15T TOUCH LAPTOP");
@@ -49,34 +49,34 @@ public class ProductsPageSteps {
 	}
 
 	// Invalid Search By Text
-	@Then("^An Error message will be displayed$")
-	public void an_Error_message_will_be_displayed() throws Throwable {
+	@Then("^Uma mensagem de erro será exibida$")
+	public void uma_mensagem_de_erro_será_exibida() throws Throwable {
 		Reporter.addStepLog("Mensagem de erro: produto não encontrado");
 		assertTrue(products.getErrorText().contains("No results for"));
 		Print_Func.captureScreenShot(driver);
 	}
 
 	// Valid Search By Image
-	@When("^User click on chosen tablet$")
-	public void user_click_on_chosen_tablet() throws Throwable {
+	@When("^Clicar no tablet escolhido$")
+	public void clicar_no_tablet_escolhido() throws Throwable {
 		Reporter.addStepLog("Clicando no produto escolhido");
 		products.click_Tablet();
 	}
 
-	@Then("^Tablet Chosed page will be displayed$")
-	public void Tablet_Chosed_page_will_be_displayed() throws Throwable {
+	@Then("^A pagina do tablet escolhido será exibida$")
+	public void a_pagina_do_tablet_escolhido_será_exibida() throws Throwable {
 		Reporter.addStepLog("Mostrando a página do produto escolhido");
 		String tituloProduto = products.getTitleText();
 		assertEquals(tituloProduto.equalsIgnoreCase("HP ElitePad 1000 G2 Tablet"), true);
 	}
-	
+
 	// Invalid Search By Image
-	@Then("^Another laptop page will be displayed$")
-    public void another_laptop_page_will_be_displayed() throws Throwable {
+	@Then("^Será exibida a página de outro laptop$")
+	public void será_exibida_a_página_de_outro_laptop() throws Throwable {
 		Reporter.addStepLog("Mostrando a página de um produto diferente");
 		String textoNotebookInvalido = home.title_NotebookInvalid();
 		String textoNotebookValido = products.getTitleText();
 		assertEquals(textoNotebookValido.equalsIgnoreCase(textoNotebookInvalido), false);
-    }
+	}
 
 }

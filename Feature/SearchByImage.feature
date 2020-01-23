@@ -1,14 +1,14 @@
-Feature: Search By Image Action
+Feature: Consultar produto pela tela principal
  
 @SearchByImageTest @Valid
-Scenario: Successful Search By Image
-	Given User is on Home Page 
-	When User click on the desired category
-	And User click on chosen tablet 
-	Then Tablet Chosed page will be displayed 
+Scenario: Pesquisa em categoria válida
+	Given Usuario esteja na página inicial 
+	When Clicar na categoria desejada
+	And Clicar no tablet escolhido
+	Then A pagina do tablet escolhido será exibida
 	
 @SearchByImageTest @Invalid
-Scenario: Fail Search By Image
-	Given User is on Home Page 
-	When User click on view details
-	Then Another laptop page will be displayed
+Scenario: Pesquisando produto errado pela imagem na tela principal
+	Given Usuario esteja na página inicial 
+	When Usuario clicar para ver detalhes do laptop
+	Then Será exibida a página de outro laptop

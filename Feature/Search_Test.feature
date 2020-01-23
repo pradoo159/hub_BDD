@@ -1,16 +1,16 @@
-Feature: Search Action
+Feature: Procurar produto por texto
  
 @SearchTest @Valid
-Scenario: Successful Search with Valid Product
-	Given User is on Home Page 
-	When User click on search button 
-	And User enters data to search 
-	And User click on chosen laptop 
-	Then Laptop Chosed page will be displayed 
+Scenario: Busca por texto de um produto válido
+	Given Usuario esteja na página inicial 
+	When Clicar no botão pesquisar
+	And Escrever o nome de um laptop 
+	And Clicar no laptop escolhido
+	Then A página do laptop escolhido será exibida 
 	
 @SearchTest @Invalid
 Scenario: Fail Search with Invalid Product 
-	Given User is on Home Page 
-	When User click on search button 
-	And User enters invalid data to search 
-	Then An Error message will be displayed
+	Given Usuario esteja na página inicial 
+	When Clicar no botão pesquisar
+	And Escrever o nome de um produto inválido ou inexistente
+	Then Uma mensagem de erro será exibida

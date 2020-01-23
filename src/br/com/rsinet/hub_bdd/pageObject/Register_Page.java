@@ -120,7 +120,7 @@ public class Register_Page {
 	}
 	
 	public void completeValidRegister() {
-		enter_UserName("pradoov126");
+		enter_UserName("pradoov129");
 		enter_Email("emersonpradoo@hotmail.com");
 		enter_Password("Teste@1234");
 		enter_ConfirmPassword("Teste@1234");
