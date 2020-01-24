@@ -11,7 +11,6 @@ import br.com.rsinet.hub_bdd.cucumber.TestContext;
 import br.com.rsinet.hub_bdd.managers.WebDriverManager;
 import br.com.rsinet.hub_bdd.pageObject.Home_Page;
 import br.com.rsinet.hub_bdd.pageObject.Products_Page;
-import br.com.rsinet.hub_bdd.util.Print_Func;
 import br.com.rsinet.hub_bdd.util.Wait;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -45,7 +44,6 @@ public class ProductsPageSteps {
 		Wait.untilJqueryIsDone(driver);
 		Reporter.addStepLog("Mostrando a página do produto escolhido");
 		assertEquals(products.getTitleText(), "HP PAVILION 15T TOUCH LAPTOP");
-		Print_Func.captureScreenShot(driver);
 	}
 
 	// Invalid Search By Text
@@ -53,7 +51,6 @@ public class ProductsPageSteps {
 	public void uma_mensagem_de_erro_será_exibida() throws Throwable {
 		Reporter.addStepLog("Mensagem de erro: produto não encontrado");
 		assertTrue(products.getErrorText().contains("No results for"));
-		Print_Func.captureScreenShot(driver);
 	}
 
 	// Valid Search By Image

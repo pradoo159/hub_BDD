@@ -1,5 +1,9 @@
 package br.com.rsinet.hub_bdd.util;
 
+/*
+ * Classe que armazena dados do excel em métodos estáticos
+ */
+
 public class Data{
 
 	public static String nomeTablet() throws Exception { 

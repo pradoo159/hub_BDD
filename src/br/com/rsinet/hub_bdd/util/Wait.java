@@ -7,6 +7,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/*
+ * Classe utilizada no Tools QA para fazer esperas
+ */
+
 import br.com.rsinet.hub_bdd.managers.FileReaderManager;
 
 public class Wait {

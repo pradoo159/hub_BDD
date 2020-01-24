@@ -8,7 +8,6 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import br.com.rsinet.hub_bdd.util.Print_Func;
 import br.com.rsinet.hub_bdd.util.Wait;
 
 public class Register_Page {
@@ -120,7 +119,7 @@ public class Register_Page {
 	}
 	
 	public void completeValidRegister() {
-		enter_UserName("pradoov129");
+		enter_UserName("pradobddv001");
 		enter_Email("emersonpradoo@hotmail.com");
 		enter_Password("Teste@1234");
 		enter_ConfirmPassword("Teste@1234");
@@ -143,7 +142,6 @@ public class Register_Page {
 		enter_Email("emersonpradoo@hotmail.com");
 		enter_Password("Teste@1234");
 		enter_ConfirmPassword("Teste@1234");
-		Print_Func.captureScreenShot(driver);
 		enter_FirstName("Emerson");
 		enter_LastName("Prado");
 		enter_PhoneNumber("11912345678");

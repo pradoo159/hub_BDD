@@ -11,6 +11,7 @@ import com.cucumber.listener.Reporter;
 import com.google.common.io.Files;
 
 import br.com.rsinet.hub_bdd.cucumber.TestContext;
+import br.com.rsinet.hub_bdd.cucumberTest.TestRunner;
 import br.com.rsinet.hub_bdd.managers.WebDriverManager;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -44,8 +45,7 @@ public class Hooks {
 		// Building up the destination path for the screenshot to save
 		// Also make sure to create a folder 'screenshots' with in the cucumber-report
 		// folder
-		File destinationPath = new File(
-				System.getProperty("user.dir") + "/target/cucumber-reports/screenshots/" + screenshotName + ".png");
+		File destinationPath = new File(TestRunner.caminhoPasta + "/" + screenshotName + ".png");
 
 		// Copy taken screenshot from source location to destination location
 		Files.copy(sourcePath, destinationPath);

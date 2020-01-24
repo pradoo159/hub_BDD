@@ -7,6 +7,10 @@ import br.com.rsinet.hub_bdd.pageObject.LogIn_Page;
 import br.com.rsinet.hub_bdd.pageObject.Products_Page;
 import br.com.rsinet.hub_bdd.pageObject.Register_Page;
 
+/*
+ * Classe que gerencia todas as pageObjects
+ */
+
 public class PageObjectManager {
 	
 	private WebDriver driver;

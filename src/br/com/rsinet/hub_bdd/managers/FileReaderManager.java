@@ -2,6 +2,10 @@ package br.com.rsinet.hub_bdd.managers;
 
 import br.com.rsinet.hub_bdd.dataProvider.ConfigFileReader;
 
+/*
+ * Classe que gerencia o objeto ConfigFileReader
+ */
+
 public class FileReaderManager {
 	
 	private static FileReaderManager fileReaderManager = new FileReaderManager();

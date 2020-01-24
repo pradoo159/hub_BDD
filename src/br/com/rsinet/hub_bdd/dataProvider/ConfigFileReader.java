@@ -9,6 +9,9 @@ import java.util.Properties;
 import br.com.rsinet.hub_bdd.enums.DriverType;
 import br.com.rsinet.hub_bdd.enums.EnvironmentType;
 
+/*
+ * Gerenciador do configuration.properties, armazena dados do arquivos através de getters
+ */
 
 public class ConfigFileReader {	
 	private Properties properties;

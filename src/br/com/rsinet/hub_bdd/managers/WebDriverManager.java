@@ -10,6 +10,10 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import br.com.rsinet.hub_bdd.enums.DriverType;
 import br.com.rsinet.hub_bdd.enums.EnvironmentType;
 
+/*
+ * Fabrica de driver
+ */
+
 public class WebDriverManager {
 	private WebDriver driver;
 	private static DriverType driverType;

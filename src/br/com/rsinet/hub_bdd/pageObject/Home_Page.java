@@ -41,6 +41,9 @@ public class Home_Page {
 	private WebElement txt_NotebookInvalid;
 	
 	@FindBy(how = How.ID, using = "searchPage")
+	private WebElement container_Result;
+	
+	@FindBy(how = How.XPATH, using = "//*[@id=\"searchPage\"]/div[3]/div")
 	private WebElement txt_Result;
 
 	public void click_MyAccount() {
@@ -55,6 +58,7 @@ public class Home_Page {
 		txtbx_Search.sendKeys(complete);
 		txtbx_Search.sendKeys(Keys.ENTER);
 		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOf(container_Result));
 		wait.until(ExpectedConditions.visibilityOf(txt_Result));
 	}
 

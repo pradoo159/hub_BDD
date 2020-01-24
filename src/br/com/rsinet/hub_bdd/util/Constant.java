@@ -1,5 +1,9 @@
 package br.com.rsinet.hub_bdd.util;
 
+/*
+ * Classe que armazena variaveis fixas para melhor manutenibilidade
+ */
+
 public class Constant {
 	
 	public static final String URL = "http://advantageonlineshopping.com/";
